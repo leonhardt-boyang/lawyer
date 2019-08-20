@@ -2,7 +2,7 @@
 <view class="container">
   <block wx:for="{{dataList}}" wx:for-index="idx" wx:key="{{index}}">
     <view class="data-item">
-      <view class="title">诉讼进度{{index+1}}：{{item.pn_str}}</view>
+      <view class="title">诉讼进度{{idx+1}}：{{item.pn_str}}</view>
       <view>诉讼记录：{{item.content}}</view>
       <view>相关图片：</view>
         <view class="images-box">

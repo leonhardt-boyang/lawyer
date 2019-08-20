@@ -19,17 +19,17 @@
             <view>
               <text>回复效率：</text>
               <view class="icon">
-                <image wx:if="{{reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
-                <image wx:if="{{reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
-                <image wx:if="{{reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
               </view>
             </view>
             <view>
               <text>回复满意度：</text>
               <view class="icon">
-                <image wx:if="{{satisfied=='1'}}" src="../../../images/haoping.png"></image>
-                <image wx:if="{{satisfied=='2'}}" src="../../../images/zhongping.png"></image>
-                <image wx:if="{{satisfied=='3'}}" src="../../../images/chaping.png"></image>
+                <image wx:if="{{item.satisfied=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.satisfied=='3'}}" src="../../../images/chaping.png"></image>
               </view>
             </view>
           </view>

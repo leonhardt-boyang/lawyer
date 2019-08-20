@@ -15,23 +15,23 @@
           <view class="name">{{item.lawyer_name}}{{item.lawyer_type_id=="2"?"(金牌律师)":"(精英律师)"}}</view>
           <view>{{item.lawyer_minimum_price}}元起/案件</view>
           <view>咨询类型：{{item.case_name}}</view>
-          <view wx:if="{{item.is_pay=='1'}}">前面排队人数：<text class="blue">{{item.line_up_num}}</text></view>
+          <view wx:if="{{item.is_pay=='1'&&item.status!=='已退款'}}">前面排队人数：<text class="blue">{{item.line_up_num}}</text></view>
           <view wx:if="{{item.status=='已完成'}}" class="evaluate" catchtap="evaluate"  data-order="{{item.order_no}}">评价</view>
           <view wx:if="{{item.is_comment=='1'}}" class="evaluate-status">
             <view>
               <text>回复效率：</text>
               <view class="icon">
-                <image wx:if="{{reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
-                <image wx:if="{{reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
-                <image wx:if="{{reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
               </view>
             </view>
             <view>
               <text>回复满意度：</text>
               <view class="icon">
-                <image wx:if="{{satisfied=='1'}}" src="../../../images/haoping.png"></image>
-                <image wx:if="{{satisfied=='2'}}" src="../../../images/zhongping.png"></image>
-                <image wx:if="{{satisfied=='3'}}" src="../../../images/chaping.png"></image>
+                <image wx:if="{{item.satisfied=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.satisfied=='3'}}" src="../../../images/chaping.png"></image>
               </view>
             </view>
           </view>
@@ -42,7 +42,7 @@
       </view>
     </view>
     <view class="pay-status">
-      <view>待支付：
+      <view>{{item.is_pay=='0'?'待支付':'已支付'}}：
         <text>￥{{item.cost}}</text>
       </view>
       <view wx:if="{{item.is_pay=='0'}}" class="payfor">去支付</view>

@@ -41,3 +41,7 @@ image{
   bottom: 132rpx;
   z-index: 999;
 }
+.pj-box{
+  width: 70%;
+  padding: 0 30rpx;
+}

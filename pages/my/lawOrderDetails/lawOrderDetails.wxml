@@ -39,7 +39,7 @@
         </view>
       </view>
     </view>
-    <view wx:if="{{dataList.is_comment=='1'}}">
+    <view wx:if="{{dataList.is_comment=='1'}}" class="pj-box">
       <view>您的评价：</view>
       <view class="evaluate-status">
         <view>
@@ -60,7 +60,7 @@
         </view>
       </view>
     </view>
-    <view class="payfor" wx:if="{{dataList.is_pay=='0'}}" data-order="{{dataList.order_no}}" data-money="{{dataList.cost}}">去支付</view>
+    <view class="payfor" wx:if="{{dataList.is_pay=='0'&&dataList.money!==0}}" data-order="{{dataList.order_no}}" data-money="{{dataList.cost}}">去支付</view>
     <view class="payfor" wx:if="{{dataList.is_pay=='1'&&dataList.is_apply=='0'}}" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}" catchtap="refund">申请退款</view>
     <view class="box-btn" wx:if="{{dataList.status=='已完成'}}">
       <view catchtap="evaluate" data-order="{{dataList.order_no}}">评价</view>
