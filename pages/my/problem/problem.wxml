@@ -1,0 +1,16 @@
+<!--pages/my/problem/problem.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="list" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="item" catchtap="changeToggle" data-index="{{index}}">
+      <view class="question">{{item[0].title}}</view>
+      <view class="icon">
+        <image hidden="{{selectedFlag[index]}}" src="../../../images/down.png"></image>
+        <image hidden="{{!selectedFlag[index]}}" src="../../../images/up.png"></image>
+      </view>
+    </view>
+    <view class="content" hidden="{{!selectedFlag[index]}}">
+      <template is="wxParse" data="{{wxParseData:item}}" />
+    </view>
+  </view>
+</view>

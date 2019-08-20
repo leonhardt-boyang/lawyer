@@ -1,0 +1,19 @@
+<!--pages/recruit/recruit.wxml-->
+<view class="recruit">
+  <view class="banner">
+    <image src="../../images/recruitbg.png"></image>
+  </view>
+  <view class="form">
+    <view class="title">诚邀您加入我们的团队</view>
+    <view class="ipt-text">
+      <input placeholder="您的姓名" bindinput="getName"></input>
+      <input placeholder="您的电话" bindinput="getPhone"></input>
+      <input placeholder="您的所属单位" bindinput="getCompany"></input>
+      <textarea placeholder="您擅长的案件类型" bindinput="getType"></textarea>
+      <button class="submit" bindtap="submit">提交</button>
+    </view>
+  </view>
+  <button class="service-btn" open-type="contact">
+    <image src="../../images/service_fill.png"></image>
+  </button>
+</view>

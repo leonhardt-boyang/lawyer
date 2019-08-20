@@ -1,0 +1,24 @@
+/* pages/banner/banner.wxss */
+@import "../../utils/wxParse/wxParse.wxss";
+.notice{
+  margin: 30rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+.title{
+  font-size: 32rpx;
+  color: #3482FD;
+  text-align: center;
+  margin: 30rpx 0;
+}
+.time{
+  font-size: 22rpx;
+  color: #999999;
+  margin: 28rpx 0;
+  text-align: center;
+}
+.content{
+  font-size: 28rpx;
+  color: #333333;
+}

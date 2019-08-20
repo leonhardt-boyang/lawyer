@@ -1,0 +1,68 @@
+<!--pages/my/lawOrderDetails/lawOrderDetails.wxml-->
+<view>
+  <view class="banner">
+    <image src="../../../images/ddxq_bg.png"></image>
+    <view class="order">
+      <view>订单状态：{{dataList.status}}</view>
+      <view>订单金额：{{dataList.money}}元</view>
+    </view>
+  </view>
+  <view class="order-box">
+    <view class="time">下单时间：{{dataList.create_time}}</view>
+    <view class="message">
+      <view class="head">
+        <image src="{{dataList.lawyer_thumb_url}}"></image>
+      </view>
+      <view class="person">
+        <view class="name">{{dataList.lawyer_name}}{{lawyer_type_id=="2"?"(金牌律师)":"(精英律师)"}}</view>
+        <view>{{dataList.lawyer_minimum_price}}元/案件</view>
+      </view>
+    </view>
+    <view class="content" style="height:{{dataList.is_comment=='1'?'376rpx':'556rpx'}}">
+      <view>您的姓名：{{dataList.name}}</view>
+      <view>您的电话：{{dataList.mobile}}</view>
+      <view>咨询类别：{{dataList.case_name}}</view>
+      <view class="text">咨询内容：{{dataList.content}}</view>
+      <view class="process">
+        <view>诉讼进度：{{dataList.process_title}}</view>
+        <view class="view-more" catchtap="progress" data-order="{{dataList.order_no}}">查看全部诉讼进度</view>
+        <view>诉讼记录：{{dataList.process_content}}</view>
+        <view>相关图片：</view>
+        <view class="about">
+          <block wx:for="{{dataList.process_enclosure}}" wx:key="{{index}}">
+            <view class="images">
+              <image src="{{item.image}}"></image>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{dataList.is_comment=='1'}}">
+      <view>您的评价：</view>
+      <view class="evaluate-status">
+        <view>
+          <text>回复效率：</text>
+          <view class="icon">
+            <image wx:if="{{reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+            <image wx:if="{{reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+            <image wx:if="{{reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+          </view>
+        </view>
+        <view>
+          <text>回复满意度：</text>
+          <view class="icon">
+            <image wx:if="{{satisfied=='1'}}" src="../../../images/haoping.png"></image>
+            <image wx:if="{{satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+            <image wx:if="{{satisfied=='3'}}" src="../../../images/chaping.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="payfor" wx:if="{{dataList.is_pay=='0'}}" data-order="{{dataList.order_no}}" data-money="{{dataList.cost}}">去支付</view>
+    <view class="payfor" wx:if="{{item.status!=='处理中'&&item.is_pay=='1'&&item.is_refund==0}}" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}" catchtap="refund">申请退款</view>
+    <view class="box-btn" wx:if="{{dataList.status=='已完成'&&dataList.is_comment==0}}">
+      <view catchtap="evaluate" data-order="{{dataList.order_no}}">评价</view>
+      <view catchtap="refund" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}">申请退款</view>
+    </view>
+  </view>
+</view>

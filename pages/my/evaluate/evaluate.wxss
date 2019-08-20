@@ -1,0 +1,54 @@
+/* pages/my/evaluate/evaluate.wxss */
+.banner{
+  height: 200rpx;
+  position: relative;
+}
+.order{
+  position: absolute;
+  top: 42rpx;
+  left: 62rpx;
+  right: 62rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.order-box{
+  position: absolute;
+  top: 130rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  background:rgba(255,255,255,.85);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+}
+.icon{
+  height: 80rpx;
+  width: 80rpx;
+  margin-bottom: 20rpx;
+}
+.title{
+  font-weight: bold;
+}
+.score{
+  text-align: center;
+}
+.evaluate{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 100rpx 0 90rpx;
+}
+.submit{
+  color:#ffffff;
+  font-size: 36rpx;
+  background-color: #3482FD;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right:30rpx;
+}

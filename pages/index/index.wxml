@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="">
+  <view class="banner">
+    <image src="../../images/my_bg.png"></image>
+    <view class="notice">
+      <view class="title">登录</view>
+      <view class="welcome">
+        <view>欢迎使用本程序</view>
+        <view>请使用微信授权登录</view>
+      </view>
+    </view>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

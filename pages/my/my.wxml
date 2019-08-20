@@ -1,0 +1,101 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+  <view class="banner">
+    <image src="../../images/my_bg.png"></image>
+    <view class="header">
+      <view class="head-box">
+        <view class="head-img">
+          <image src="{{dataList.head_img_url}}"></image>
+        </view>
+      </view>
+      <view class="name">{{dataList.nick_name}}<text wx:if="{{dataList.is_lawyer==true}}">{{dataList.lawyer_type_id==2?'(金牌律师)':'(精英律师)'}}</text></view>
+    </view>
+  </view>
+  <view class="my-message">
+    <view  wx:if="{{dataList.is_lawyer==false}}" class="my-item" catchtap="myFocus"  data-lawyer="{{dataList.is_lawyer}}">
+      <view>
+        <view class="icon">
+          <image src="../../images/gz.png"></image>
+        </view>
+        <text class="title">我的关注</text>
+      </view>
+      <view>
+        <text class="number">{{dataList.lawyer_follow}}</text>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+    <view  wx:if="{{dataList.is_lawyer==true}}" class="my-item" catchtap="myfans">
+      <view>
+        <view class="icon">
+          <image src="../../images/gz.png"></image>
+        </view>
+        <text class="title">我的粉丝</text>
+      </view>
+      <view>
+        <text class="number">{{dataList.lawyer_fans}}</text>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="my-item" catchtap="myConsult" data-lawyer="{{dataList.is_lawyer}}">
+      <view>
+        <view class="icon">
+          <image src="../../images/zx.png"></image>
+        </view>
+        <text  class="title">我的咨询订单</text>
+      </view>
+      <view>
+        <text  wx:if="{{dataList.is_lawyer==false}}">前面排队人数：</text>
+        <text  wx:if="{{dataList.is_lawyer==false}}" class="number">{{dataList.consultation_line}}</text>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="my-item" catchtap="myLawsuit"  data-lawyer="{{dataList.is_lawyer}}">
+      <view>
+        <view class="icon">
+          <image src="../../images/ss.png"></image>
+        </view>
+        <text  class="title">我的诉讼订单</text>
+      </view>
+      <view>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="my-item"  wx:if="{{dataList.is_lawyer==true}}" catchtap="myCard">
+      <view>
+        <view class="icon">
+          <image src="../../images/mp.png"></image>
+        </view>
+        <text  class="title">我的名片</text>
+      </view>
+      <view>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="my-item" catchtap="myProblem">
+      <view>
+        <view class="icon">
+          <image src="../../images/wt.png"></image>
+        </view>
+        <text  class="title">常见问题</text>
+      </view>
+      <view>
+        <view class="r-icon">
+          <image src="../../images/next.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="service-btn" open-type="contact">
+    <image src="../../images/service_fill.png"></image>
+  </button>
+</view>

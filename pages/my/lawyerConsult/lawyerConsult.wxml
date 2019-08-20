@@ -1,0 +1,38 @@
+<!--pages/my/lawyerConsult/lawyerConsult.wxml-->
+<view class="myConsult container">
+  <block wx:for="{{dataList}}" wx:key="{{index}}">
+  <view class="order-item" catchtap="orderDetails" data-order="{{item.order_no}}">
+    <view class="order-status">
+      <view>下单时间：{{item.create_time}}</view>
+      <view>订单状态：<text class="blue">{{item.status}}</text></view>
+    </view>
+    <view class="elite-item">
+      <view class="elite-descript">
+        <view class="elite-head">
+          <image src="{{item.user_avatar}}"></image>
+        </view>
+        <view class="elite-message">
+          <view class="name">{{item.name}}</view>
+          <view>电话：{{item.mobile}}</view>
+          <view>咨询类型：{{item.case_name}}</view>
+        </view>
+      </view>
+      <view class="next-icon">
+        <image src="../../../images/next.png"></image>
+      </view>
+    </view>
+    <view class="pay-status">
+      <view>已支付：
+        <text>￥{{item.cost}}</text>
+      </view>
+      <view class="call" catchtap="telphone" data-phone="{{item.mobile}}">
+        <view class="sm-icon">
+          <image src="../../../images/tel.png"></image>
+        </view>
+        <text>拨号</text>
+      </view>
+    </view>
+  </view>
+  </block>
+  <view wx:if="{{dataList.length==0}}" class="no-data">暂无数据...</view>
+</view>

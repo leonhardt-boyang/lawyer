@@ -1,0 +1,25 @@
+<!--pages/lawyerService/searchList/searchList.wxml-->
+<view class="service container">
+  <view class="search">
+    <input class="ipt" value="{{keyword}}" disabled="true"></input>
+  </view>
+  <view class="elite-list">
+  <block wx:for="{{lawyerList}}" wx:key="{{index}}">
+    <view class="elite-item" catchtap="lawyerDetails" data-type="{{item.type_id}}" data-id="{{item.id}}" data-flow="{{item.is_follow}}">
+      <view class="elite-descript">
+        <view class="elite-head"><image src="{{item.thumb_url}}"></image></view>
+        <view class="elite-message">
+          <view class="name">{{item.true_name}}{{item.type_id=='2'?"(金牌律师)":"(精英律师)"}}</view>
+          <view>{{item.minimum_price}}元起/案件</view>
+          <view>好评度：{{item.praise}}%</view>
+          <view>关注人数：{{item.follow}}</view>
+        </view>
+      </view>
+      <view class="focus-btn1">
+          <image src="../../../images/add1.png" hidden="{{item.is_follow==true?true:false}}" data-id="{{item.id}}" catchtap="focus"></image>
+          <image src="../../../images/sub1.png" hidden="{{item.is_follow==true?false:true}}" data-id="{{item.id}}" catchtap="focus"></image>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>

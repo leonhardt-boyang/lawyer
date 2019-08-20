@@ -1,0 +1,46 @@
+<!--pages/my/myCard/myCard.wxml-->
+<view class="">
+  <view class="card">
+    <image src="../../../images/mp_bg.png"></image>
+    <view class="message">
+      <view class="info">
+        <view class="name">{{dataList.true_name}}（精英律师）</view>
+        <view class="line"></view>
+        <view>电话：{{dataList.mobile}}</view>
+        <view>擅长案件类型：{{dataList.case_str}}</view>
+      </view>
+      <view class="head-box">
+        <view class="images">
+          <image src="{{dataList.head_img_url}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tym">
+    <image src="{{dataList.solar_code}}"></image>
+  </view>
+  <view class="transmit" bindtap="goShare">转发</view>
+  <!-- 分享弹窗 -->
+  <view class='share-bg' hidden='{{modelShow}}'>
+      <view class='share-box'>
+          <view class='share-title'>分享到</view>
+          <view class='share-btn-box'>
+              <button open-type="share" class='share-btn' data-id="{{dataList.id}}">
+                  <view class='btn-img'>
+                      <image src='../../../images/wechat.png'></image>
+                  </view>
+                  <text>微信</text>
+              </button>
+              <view class='share-pyq' catchtap='sharePyq' data-id="{{dataList.id}}">
+                  <view class='btn-img'>
+                      <image src='../../../images/pyq.png'></image>
+                  </view>
+                  <text>朋友圈</text>
+              </view>
+          </view>
+          <view class='cancel' catchtap='cancel'>取消</view>
+      </view>
+  </view>
+  <!-- 分享朋友圈制图 -->
+  <view class='canvas-bg' hidden='{{canvasShow}}'><canvas canvas-id="shareCanvas" id='shareCanvas'></canvas></view>
+</view>

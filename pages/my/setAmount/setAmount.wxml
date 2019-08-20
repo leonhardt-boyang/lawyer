@@ -1,0 +1,10 @@
+<!--pages/my/setAmount/setAmount.wxml-->
+<view>
+  <view class="banner">
+    <image src="../../../images/ddxq_bg.png"></image>
+  </view>
+  <view class="order-box">
+    <input placeholder="请输入诉讼费用金额" bindinput="money"></input>
+    <view class="submit" catchtap="submit">确定</view>
+  </view>
+</view>

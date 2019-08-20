@@ -1,0 +1,11 @@
+<!--pages/legalAid/legalAid.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="title">{{dataList.title}}</view>
+  <view class="legal">
+    <template is="wxParse" data="{{wxParseData:topic.nodes}}" />
+  </view>
+  <button class="service-btn" open-type="contact">
+    <image src="../../images/service_fill.png"></image>
+  </button>
+</view>

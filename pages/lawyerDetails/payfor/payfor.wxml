@@ -1,0 +1,22 @@
+<!--pages/lawyerDetails/payfor/payfor.wxml-->
+<view class="recruit">
+  <view class="banner">
+    <image src="../../../images/payfor.png"></image>
+  </view>
+  <view class="form">
+    <view class="title">请核对信息后完成支付</view>
+    <view class="ipt-text">
+      <view class="money">支付金额：<text>￥{{money}}</text></view>
+      <view class="content">
+        <view>您的姓名：{{name}}</view>
+        <view>您的电话：{{phone}}</view>
+        <view>咨询类别：{{type}}</view>
+        <view class="desc">咨询内容：{{content}}</view>
+      </view>
+    </view>
+    <view class="box-btn">
+      <view class="cancel" bindtap="cancel">取消</view>
+      <view class="payfor" bindtap="payfor">确认支付</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+<!--pages/my/lawyerLawsuit/lawyerLawsuit.wxml-->
+<view class="myConsult container">
+  <block wx:for="{{dataList}}" wx:key="{{index}}">
+  <view class="order-item" catchtap="orderDetails" data-order="{{item.order_no}}">
+    <view class="order-status">
+      <view>下单时间：{{item.create_time}}</view>
+      <view>订单状态：<text class="blue">{{item.status}}</text></view>
+    </view>
+    <view class="elite-item">
+      <view class="elite-descript">
+        <view class="elite-head">
+          <image src="{{item.user_avatar}}"></image>
+        </view>
+        <view class="elite-message">
+          <view class="name">{{item.name}}</view>
+          <view>电话：{{item.mobile}}</view>
+          <view>案件类型：{{item.case_name}}</view>
+          <view wx:if="{{item.is_comment=='1'}}" class="evaluate-status">
+            <view>
+              <text>回复效率：</text>
+              <view class="icon">
+                <image wx:if="{{reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+              </view>
+            </view>
+            <view>
+              <text>回复满意度：</text>
+              <view class="icon">
+                <image wx:if="{{satisfied=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{satisfied=='3'}}" src="../../../images/chaping.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="next-icon">
+        <image src="../../../images/next.png"></image>
+      </view>
+    </view>
+    <view class="pay-status">
+      <view>
+      <view wx:if="{{item.money==0}}">未设定金额</view>
+      <view wx:else>{{item.is_pay==0?'待支付':'已支付'}}：<text>￥{{item.money}}</text></view>
+      </view>
+      <view class="call" catchtap="telphone" data-phone="{{item.mobile}}">
+        <view class="sm-icon">
+          <image src="../../../images/tel.png"></image>
+        </view>
+        <text>拨号</text>
+      </view>
+    </view>
+  </view>
+  </block>
+  <view wx:if="{{dataList.length==0}}" class="no-data">暂无数据...</view>
+</view>
+

@@ -1,0 +1,149 @@
+/* pages/my/lawyerLD/lawyerLD.wxss */
+.banner{
+  height: 200rpx;
+  position: relative;
+}
+.order{
+  position: absolute;
+  top: 42rpx;
+  left: 62rpx;
+  right: 62rpx;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.order-box{
+  position: absolute;
+  top: 130rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  background:rgba(255,255,255,.85);
+  border-radius: 20rpx;
+}
+
+.message{
+  display: flex;
+  align-items: center;
+  border-top:1px solid #E1E1E1;
+  border-bottom:1px solid #E1E1E1;
+  box-sizing: border-box;
+  padding: 30rpx;
+  margin: 30rpx 0;
+}
+
+.head{
+  height: 168rpx;
+  width: 168rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-right: 42rpx;
+}
+.time{
+  padding: 40rpx 30rpx 0;
+  font-size: 24rpx;
+}
+.name{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.content{
+  font-size: 28rpx;
+  line-height: 42rpx;
+  padding: 0 30rpx;
+  overflow: auto;
+}
+.text{
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+  border-bottom: 1px solid #E1E1E1;
+}
+.payfor{
+  background-color: #3482FD;
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.box-btn{
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-btn view{
+  flex: 1;
+  font-size: 36rpx;
+  color: #ffffff;
+  background-color: #3482FD;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+}
+.complete{
+  margin-left:46rpx; 
+}
+.evaluate-status{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.evaluate-status>view{
+  display: flex;
+  align-items: center;
+  margin-right: 10rpx;
+}
+
+.icon{
+  height: 34rpx;
+  width: 34rpx;
+}
+
+.person{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.telphone{
+  color: #ffffff;
+  font-size: 24rpx;
+  padding: 8rpx 20rpx;
+  background-color: #3482FD;
+  border-radius: 40rpx;
+}
+.view-more{
+  color: #3482FD;
+  text-decoration: underline;
+}
+
+.images-box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.images{
+  height: 225rpx;
+  width: 48%;
+  margin: 1%;
+}
+.pj-box{
+  width: 60%;
+  padding: 0 30rpx;
+}

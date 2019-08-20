@@ -1,0 +1,19 @@
+/* pages/legalAid/legalAid.wxss */
+@import "../../utils/wxParse/wxParse.wxss";
+.legal image,
+.legal video{
+  width: 100% !important;
+  height: 225px;
+  display: block;
+  border-radius: 20rpx;
+}
+.title{
+  font-size: 28rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.container{
+  margin: 30rpx;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+}

@@ -1,0 +1,36 @@
+<!--pages/lawyerDetails/lawyerDetails.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml" />
+<view class="lawyer-details">
+  <view class="lawyer-descript">
+    <image src="{{dataList.bg_url}}"></image>
+    <view class="cover-lawyer">
+      <view class="message">
+        <view class="gold-icon">
+          <image src="../../images/medal.png"></image>
+        </view>
+        <view class="name">{{dataList.true_name}}{{type=="2"?"(金牌律师)":"(精英律师)"}}</view>
+      </view>
+      <view>{{dataList.minimum_price}}元起/案件</view>
+      <view class="merit">擅长案件类型：{{dataList.case_str}}</view>
+      <view class="focus">
+        <view>关注人数：{{focusNum}}</view>
+        <view class="add-btn"  data-id="{{dataList.id}}" hidden="{{flow=='true'?true:false}}" catchtap="focus">
+          <image src="../../images/add2.png"></image>
+        </view>
+        <view class="add-btn" data-id="{{dataList.id}}" hidden="{{flow=='true'?false:true}}" catchtap="focus">
+          <image src="../../images/sub2.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="flow container">
+    <view class="title">诉讼业务介绍及流程：</view>
+    <view>
+      <template is="wxParse" data="{{wxParseData:topic.nodes}}" />
+      <view class="btn-box">
+        <view catchtap="consult" data-id="{{dataList.id}}">开始咨询</view>
+        <view catchtap="lawsuit" data-id="{{dataList.id}}">开始诉讼</view>      
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,132 @@
+/* pages/my/myCard/myCard.wxss */
+.card{
+  height: 532rpx;
+  position: relative;
+}
+.message{
+  position: absolute;
+  top: 80rpx;
+  left: 70rpx;
+  right: 70rpx;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+.info{
+  flex: 1;
+  color: #ffffff;
+  margin-right: 80rpx;
+  font-size: 28rpx;
+  line-height: 42rpx;
+}
+
+.name{
+  font-size: 36rpx;
+}
+
+.line{
+  margin: 30rpx 0;
+  border-top: 1px solid #ffffff;
+}
+
+.head-box{
+  height: 162rpx;
+  width: 162rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border:6rpx solid #95B9FB;
+}
+.images{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  border:6rpx solid #ffffff;
+}
+.tym{
+  height: 258rpx;
+  width: 258rpx;
+  margin: 140rpx auto;
+}
+.transmit{
+  position: absolute;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  font-size: 36rpx;
+  color: #ffffff;
+  background-color: #3482FD;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+}
+.share-btn{
+    margin: 0;
+    padding: 0;
+    font-size: 24rpx;
+    line-height: inherit;
+    background-color: #fff;
+}
+.button-hover{
+    color: #444;
+    background-color: #fff;
+}
+button::after {
+  border: none;
+}
+.share-bg,
+.canvas-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    background:rgba(0,0,0,.6);
+}
+.share-box{
+    background:#fff;
+    width:80%;
+    margin:25% auto;
+    border-radius:15rpx;
+    font-weight:bold;
+}
+.share-title{
+    text-align:center;
+    padding:56rpx 0 35rpx 0;
+}
+.share-btn-box{
+    display:flex;
+    justify-content:space-evenly;
+    line-height:60rpx;
+}
+.btn-img{
+    height: 96rpx;
+    width: 96rpx;
+}
+.share-pyq{
+    font-size: 24rpx;
+    text-align: center;
+}
+.cancel{
+    padding:24rpx 0;
+    text-align:center;
+    border-top:1px solid #e1e1e1;
+    margin-top:30rpx;
+}
+#shareCanvas{
+    position: fixed;
+    top: 40rpx;
+    left: 0;
+    right: 0;
+    margin-left: 300rpx;
+    height: 780rpx;
+    width: 600rpx;
+    margin: 50rpx auto 0;
+    border-radius: 15rpx;
+}
+.description{
+    padding: 30rpx;
+}

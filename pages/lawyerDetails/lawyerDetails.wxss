@@ -1,0 +1,85 @@
+/* pages/lawyerDetails/lawyerDetails.wxss */
+@import "../../utils/wxParse/wxParse.wxss";
+.lawyer-descript{
+  height: 447rpx;
+}
+.cover-lawyer{
+  width: 50%;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  color: #ffffff;
+}
+.message{
+  display: flex;
+  align-items: center
+}
+.gold-icon{
+  height: 30rpx;
+  width: 27rpx;
+  margin-right: 10rpx;
+}
+.name{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.add-btn{
+  height: 40rpx;
+  width: 70rpx;
+}
+.focus{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.merit{
+  word-break: break-all;
+  word-wrap:break-word;
+  white-space:pre-line;
+  margin: 40rpx 0;
+}
+.flow{
+  position: absolute;
+  background: rgba(255,255,255,.85);
+  box-shadow: 0px 0px 20px 0px rgba(0,4,0,0.1);
+  border-radius: 20rpx;
+  z-index: 1;
+  top: 340rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+
+.wxParse-p{
+  height: 560rpx;
+  overflow: auto;
+}
+
+.btn-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx dotted #DCDCDC;
+  margin-top: 30rpx;
+  position: absolute;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  padding: 0 30rpx;
+}
+
+.btn-box view{
+  font-size: 36rpx;
+  color: #FEFEFE;
+  background:rgba(52,130,253,1);
+  border-radius:40px;
+  padding: 23rpx 75rpx;
+  margin-top: 30rpx;
+}
+.title{
+ font-size: 32rpx;
+ color: #333333;
+ font-weight: bold;
+ margin-bottom: 30rpx;
+ 
+}

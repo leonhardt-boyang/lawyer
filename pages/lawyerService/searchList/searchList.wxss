@@ -1,0 +1,70 @@
+/* pages/lawyerService/searchList/searchList.wxss */
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+}
+.search-btn {
+  color: #FFFEFE;
+  background-color: #3482FD;
+  margin: 0;
+  height: 70rpx;
+  border: none;
+  outline: none;
+  padding: 0 43rpx;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  border-radius: 70rpx;
+}
+.ipt{
+  height: 70rpx;
+  flex: 1;
+  font-size: 28rpx;
+  padding:0 24rpx;
+  border-radius: 70rpx;
+  background-color: #ffffff;
+  border: 2rpx solid #CCCCCC;
+}
+.elite-item {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e1e1e1;
+}
+
+.elite-item:last-child {
+  border: none;
+}
+
+.elite-descript {
+  display: flex;
+  align-items: center;
+}
+
+.elite-head {
+  height: 168rpx;
+  width: 168rpx;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
+}
+
+.elite-message {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 42rpx;
+}
+
+.elite-message .name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.focus-btn1 {
+  width: 70rpx;
+  height: 40rpx;
+}

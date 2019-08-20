@@ -1,0 +1,20 @@
+<!--pages/lawyerDetails/success/success.wxml-->
+<view class="success">
+  <view class="banner">
+    <image src="../../../images/my_bg.png"></image>
+    <view class="success-box">
+      <view class="icon">
+        <image src="../../../images/success.png"></image>
+      </view>
+      <view class="title">订单提交成功</view>
+    </view>
+  </view>
+  <view  class="notice">
+    <view>您的订单已经提交成功 </view>
+    <view>律师将在3分钟内回复您</view>
+  </view>
+  <view class="box-btn">
+    <view bindtap="goHome">返回首页</view>
+    <view hidden="{{isShow}}" >查看订单</view> 
+  </view>
+</view>

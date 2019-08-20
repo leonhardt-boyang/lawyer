@@ -1,0 +1,17 @@
+<!--pages/my/refund/refund.wxml-->
+<view>
+  <view class="banner">
+    <image src="../../../images/ddxq_bg.png"></image>
+  </view>
+  <view class="order-box container">
+    <view class="title">您申请的退款金额为：</view>
+    <view class="money">
+      <view class="icon">
+        <image src="../../../images/refund.png"></image>
+      </view>
+      <view class="price">￥<text>{{money}}</text>元</view>
+    </view>
+    <view class="submit" catchtap="apply">提交</view>
+  </view>
+</view>
+

@@ -1,0 +1,70 @@
+/* pages/my/editProgress/editProgress.wxss */
+.images-box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.images{
+  height: 225rpx;
+  width: 48%;
+  margin: 1%;
+  position: relative;
+}
+.data-item{
+  padding: 30rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  font-size:28rpx;
+  line-height:48rpx; 
+  margin-bottom: 30rpx;
+  box-shadow:0px 0px 20px 0px rgba(0,4,0,0.1);
+  position: relative;
+}
+.title{
+  font-weight:bold;
+}
+.icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 14rpx;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.action-btn{
+  font-size: 32rpx;
+  color: #3482FD;
+  text-align: center;
+  padding-top: 30rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid #e1e1e1;
+}
+.isSpeed{
+  width:55rpx;
+  height:62rpx;
+  border-radius:10px; 
+  position: absolute;
+  top: 0;
+  right:0;
+}
+textarea{
+  width: initial;
+  border: 1px dashed #3482FD;
+}
+
+.over-del{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background:rgba(52,130,253,.5);
+}
+
+.delete{
+  height: 48rpx;
+  width: 48rpx;
+  margin: 89rpx auto 0;
+}

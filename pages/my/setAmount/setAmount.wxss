@@ -1,0 +1,32 @@
+/* pages/my/setAmount/setAmount.wxss */
+.banner{
+  height: 200rpx;
+  position: relative;
+}
+.order-box{
+  position: absolute;
+  top: 130rpx;
+  left: 30rpx;
+  right: 30rpx;
+  background:rgba(255,255,255,.85);
+  border-radius: 20rpx;
+  padding: 60rpx 30rpx;
+}
+.order-box input{
+  height:70rpx;
+  line-height: 70rpx;
+  background:rgba(255,255,255,1);
+  border:2rpx solid rgba(204,204,204,1);
+  border-radius:35rpx;
+  padding:0 24rpx;
+  margin-bottom: 100rpx;
+}
+.order-box .submit{
+  height:80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  text-align: center;
+  background:rgba(52,130,253,1);
+  border-radius:40rpx;
+}

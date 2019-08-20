@@ -1,0 +1,26 @@
+<!--pages/my/myFocus/myFocus.wxml-->
+<view class="container">
+  <view class="elite-lawyers">
+    <view class="elite-list">
+    <block wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="elite-item" catchtap="lawyerDetails" data-type="{{item.lawyer_type_id}}" data-id="{{item.lawyer_id}}">
+        <view class="elite-descript">
+          <view class="elite-head">
+            <image src="{{item.thumb_url}}"></image>
+          </view>
+          <view class="elite-message">
+            <view class="name">{{item.lawyer_name}}{{item.lawyer_type_id=="2"?"(金牌律师)":"(精英律师)"}}</view>
+            <view>{{item.minimum_price}}元起/案件</view>
+            <view>好评度：{{item.praise}}%</view>
+            <view>关注人数：{{item.follow}}</view>
+          </view>
+        </view>
+        <view class="focus-btn1">
+          <image src="../../../images/sub1.png" catchtap="unfollow" data-id="{{item.lawyer_id}}"></image>
+        </view>
+      </view>
+    </block>
+    </view>
+    <view wx:if="{{dataList.length==0}}" class="no-data">暂时数据...</view>
+  </view>
+</view>

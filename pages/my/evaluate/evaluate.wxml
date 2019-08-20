@@ -1,0 +1,40 @@
+<!--pages/my/evaluate/evaluate.wxml-->
+<view>
+  <view class="banner">
+    <image src="../../../images/ddxq_bg.png"></image>
+    <view class="order">订单已完成，请做出评价</view>
+  </view>
+  <view class="order-box container">
+    <view class="title">请对律师的回复速度进行评价：</view>
+    <view class="evaluate">
+      <view class="score" bindtap='change' data-id='1'>
+        <view class="icon"><image src="../../../images/haoping{{index1}}.png"></image></view>
+        <view>好</view>
+      </view>
+      <view class="score" bindtap='change' data-id='2'>
+        <view class="icon"><image src="../../../images/zhongping{{index2}}.png"></image></view>
+        <view>中</view>
+      </view>
+      <view class="score" bindtap='change' data-id='3'>
+        <view class="icon"><image src="../../../images/chaping{{index3}}.png"></image></view>
+        <view>差</view>
+      </view>
+    </view>
+    <view class="title">请对律师的回复满意度进行评价：   </view>
+    <view class="evaluate">
+      <view class="score" bindtap='change_color' data-id='1'>
+        <view class="icon"><image src="../../../images/haoping{{ico_index1}}.png"></image></view>
+        <view>好</view>
+      </view>
+      <view class="score" bindtap='change_color' data-id='2'>
+        <view class="icon"><image src="../../../images/zhongping{{ico_index2}}.png"></image></view>
+        <view>中</view>
+      </view>
+      <view class="score" bindtap='change_color' data-id='3'>
+        <view class="icon"><image src="../../../images/chaping{{ico_index3}}.png"></image></view>
+        <view>差</view>
+      </view>
+    </view>
+    <view class="submit" catchtap="submit">提交</view>
+  </view>
+</view>

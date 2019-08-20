@@ -1,0 +1,45 @@
+<!--pages/my/editProgress/editProgress.wxml-->
+<view class="container">
+  <block wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="data-item">
+      <view class="title">诉讼进度{{index}}：{{item.pn_str}}
+        <view class="isSpeed" wx:if="{{item.is_speed==true}}">
+          <image src="../../../images/duihao.png"></image>
+        </view>
+      </view>
+      <view class="conntent"  hidden="{{!selectedFlag[index]}}">
+        <view>
+          <text>诉讼记录：</text>
+          <textarea maxlength="-1" value="{{item.content}}" bindblur="editText" data-index="{{index}}"></textarea>
+        </view>
+        <view>相关图片：</view>
+        <view class="images-box">
+          <view class="images"  wx:for="{{item.enclosure}}" wx:key="{{index}}">
+            <image src="{{item}}"></image>
+            <view class="over-del">
+              <view class="delete" catchtap="delImg" data-index="{{index}}">
+                <image src="../../../images/del.png"></image>
+              </view>
+            </view>
+          </view>
+          <view class="images" catchtap="choose">
+            <image src="../../../images/addimg.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="action-btn"  hidden="{{selectedFlag[index]}}"  catchtap="changeToggle" data-index="{{index}}" data-type="0">
+        <view class="icon">
+          <image src="../../../images/edit.png"></image>
+        </view>
+        <text>编辑</text>
+      </view>
+      <view class="action-btn"  hidden="{{!selectedFlag[index]}}"  catchtap="changeToggle" data-index="{{index}}" data-id="{{item.id}}"  data-type="1">
+        <view class="icon">
+          <image src="../../../images/save.png"></image>
+        </view>
+        <text>保存</text>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{dataList.length==0}}" class="no-data">暂无数据...</view>
+</view>

@@ -1,0 +1,35 @@
+/* pages/my/problem/problem.wxss */
+@import "../../../utils/wxParse/wxParse.wxss";
+.list{
+  margin-bottom: 30rpx;
+}
+.item{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 36rpx 30rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+.question{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #3482FD;
+}
+.icon{
+  height: 13rpx;
+  width: 22rpx;
+}
+.icon image{
+  vertical-align: top;
+}
+.content{
+  font-size: 24rpx;
+  color: #333333;
+  line-height: 48rpx;
+  padding: 0 30rpx 30rpx;
+  background-color: #ffffff;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}

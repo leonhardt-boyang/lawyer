@@ -1,0 +1,65 @@
+/* pages/lawyerDetails/payfor/payfor.wxss */
+.banner{
+  height: 300rpx;
+}
+.form{
+  position: absolute;
+  background: rgba(255,255,255,.85);
+  box-shadow: 0px 0px 20px 0px rgba(0,4,0,0.1);
+  border-radius: 20rpx;
+  z-index: 1;
+  top: 230rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  padding: 30rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+.title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.box-btn{
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.cancel{
+  flex: 1;
+  margin-right: 25rpx;
+  border: 1rpx solid rgba(52,130,253,1);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: rgba(52,130,253,1);
+  border-radius: 40rpx;
+}
+
+.payfor{
+  flex: 1;
+  color: #ffffff;
+  margin-left: 25rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color:rgba(52,130,253,1);
+  border-radius: 40rpx;
+}
+.money{
+  margin: 40rpx 0 50rpx;
+}
+.money  text{
+  font-size: 48rpx;
+  color: rgba(52,130,253,1);
+}
+.desc{
+  height: 430rpx;
+  overflow: auto;
+}

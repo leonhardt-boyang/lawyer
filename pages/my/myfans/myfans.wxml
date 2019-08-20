@@ -1,0 +1,12 @@
+<!--pages/my/myfans/myfans.wxml-->
+<view class="container">
+  <block wx:for="{{dataList}}" wx:key="{{index}}">
+  <view class="item">
+    <view class="head">
+      <image src="{{item.head_img_url}}"></image>
+    </view>
+    <view class="name">{{item.nick_name}}</view>
+  </view>
+  </block>
+  <view wx:if="{{dataList.length==0}}" class="no-data">暂时数据...</view>
+</view>

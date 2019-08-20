@@ -1,0 +1,19 @@
+/* pages/my/myfans/myfans.wxss */
+.item{
+  display: flex;
+  align-items: top;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 30rpx 0;
+  margin: 30rpx 0;
+}
+.head{
+  height: 168rpx;
+  width: 168rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+.name{
+  font-weight: bold;
+  font-size: 32rpx;
+}

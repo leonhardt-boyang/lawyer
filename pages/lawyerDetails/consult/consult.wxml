@@ -1,0 +1,22 @@
+<!--pages/lawyerDetails/consult/consult.wxml-->
+<view class="recruit">
+  <view class="banner">
+    <image src="../../../images/consult.png"></image>
+  </view>
+  <view class="form">
+    <view class="title">请将你想要咨询的内容告诉我们</view>
+    <view class="ipt-text">
+      <input placeholder="您的姓名" bindinput="getName"></input>
+      <input placeholder="您的电话" bindinput="getPhone"></input>
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="case_name">
+          <view class="picker">
+          <input placeholder="咨询类别" value="{{array[index].case_name}}" disabled="disabled"></input>
+          </view>
+        </picker>
+      </view>
+      <textarea placeholder="您的咨询内容" bindinput="getContent"  maxlength="-1"></textarea>
+      <button class="submit" catchtap="payfor">去支付</button>
+    </view>
+  </view>
+</view>

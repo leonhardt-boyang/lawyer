@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/notice/notice",
+    "pages/lawyerDetails/lawyerDetails",
+    "pages/lawyerService/lawyerService",
+    "pages/lawyerService/searchList/searchList",
+    "pages/recruit/recruit",
+    "pages/my/my",
+    "pages/my/myFocus/myFocus",
+    "pages/my/lawsuit/lawsuit",
+    "pages/my/consult/consult",
+    "pages/my/problem/problem",
+    "pages/lawyerDetails/consult/consult",
+    "pages/lawyerDetails/lawsuit/lawsuit",
+    "pages/banner/banner",
+    "pages/lawyerDetails/payfor/payfor",
+    "pages/lawyerDetails/success/success",
+    "pages/legalAid/legalAid",
+    "pages/my/orderDetails/orderDetails",
+    "pages/my/evaluate/evaluate",
+    "pages/my/refund/refund",
+    "pages/my/lawOrderDetails/lawOrderDetails",
+    "pages/my/progress/progress",
+    "pages/my/myCard/myCard",
+    "pages/my/myfans/myfans",
+    "pages/my/lawyerConsult/lawyerConsult",
+    "pages/my/lawyerLawsuit/lawyerLawsuit",
+    "pages/my/lawyerCD/lawyerCD",
+    "pages/my/lawyerLD/lawyerLD",
+    "pages/my/setAmount/setAmount",
+    "pages/my/editProgress/editProgress"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "龙视律师服务平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#3482FD",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "images/home_2.png",
+        "iconPath": "images/home_1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/help_2.png",
+        "iconPath": "images/help_1.png",
+        "pagePath": "pages/legalAid/legalAid",
+        "text": "法律援助"
+      },
+      {
+        "selectedIconPath": "images/service_2.png",
+        "iconPath": "images/service_1.png",
+        "pagePath": "pages/lawyerService/lawyerService",
+        "text": "律师服务"
+      },
+      {
+        "selectedIconPath": "images/recruit_2.png",
+        "iconPath": "images/recruit_1.png",
+        "pagePath": "pages/recruit/recruit",
+        "text": "律师招募"
+      },
+      {
+        "selectedIconPath": "images/my_2.png",
+        "iconPath": "images/my_1.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,78 @@
+/* pages/my/lawyerConsult/lawyerConsult.wxss */
+.order-item{
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+
+.pay-status,
+.order-status{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+}
+.pay-status{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.pay-status text{
+  color: #3482FD;
+}
+
+.elite-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  justify-content: space-between;
+  border-top: 1rpx solid #e1e1e1;
+  border-bottom: 1rpx solid #e1e1e1;
+}
+
+
+.elite-descript {
+  display: flex;
+  align-items: center;
+}
+
+.elite-head {
+  height: 168rpx;
+  width: 168rpx;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
+  overflow: hidden;
+}
+
+.elite-message {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 42rpx;
+}
+
+.elite-message .name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.next-icon{
+  height: 26rpx;
+  width: 15rpx;
+}
+
+
+.icon{
+  height: 34rpx;
+  width: 34rpx;
+}
+
+.call{
+  display: flex;
+  align-items: center;
+}
+
+.sm-icon{
+  height: 30rpx;
+  width: 32rpx;
+  margin-right: 10rpx;
+}

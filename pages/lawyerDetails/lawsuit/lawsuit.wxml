@@ -1,0 +1,22 @@
+<!--pages/lawyerDetails/lawsuit/lawsuit.wxml-->
+<view class="recruit">
+  <view class="banner">
+    <image src="../../../images/lawsuit.png"></image>
+  </view>
+  <view class="form">
+    <view class="title">请将你想要诉讼的内容告诉我们</view>
+    <view class="ipt-text">
+      <input placeholder="您的姓名" bindinput="getName"></input>
+      <input placeholder="您的电话" bindinput="getPhone"></input>
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="case_name">
+          <view class="picker">
+          <input placeholder="案件类型" value="{{array[index].case_name}}" disabled="disabled"></input>
+          </view>
+        </picker>
+      </view>
+      <textarea placeholder="您的诉讼内容" bindinput="getContent" maxlength="-1"></textarea>
+      <button class="submit" catchtap="payfor">提交</button>
+    </view>
+  </view>
+</view>

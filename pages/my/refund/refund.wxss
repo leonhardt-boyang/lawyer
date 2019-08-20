@@ -1,0 +1,62 @@
+/* pages/my/refund/refund.wxss */
+.banner{
+  height: 200rpx;
+  position: relative;
+}
+.order{
+  position: absolute;
+  top: 42rpx;
+  left: 62rpx;
+  right: 62rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.order-box{
+  position: absolute;
+  top: 130rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  background:rgba(255,255,255,.85);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.money{
+  text-align: center;
+  margin-top: 160rpx;
+}
+
+.price{
+  color: #3482FD;
+  font-size: 32rpx;
+}
+
+.price text{
+  font-size: 60rpx;
+}
+
+.icon{
+  height: 268rpx;
+  width: 268rpx;
+  margin: 0 auto 66rpx;
+}
+
+.submit{
+  color:#ffffff;
+  font-size: 36rpx;
+  background-color: #3482FD;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right:30rpx;
+}

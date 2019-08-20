@@ -1,0 +1,85 @@
+ <!--pages/home/home.wxml-->
+<view class="container">
+  <!-- 标题 -->
+  <view class="logo"><image src="../../images/logo.png"></image></view>
+  <!-- 公告 -->
+  <view class="notice">
+    <swiper class="swiper-container" vertical="true" autoplay="true" circular="true" interval="2000">
+      <block wx:for="{{msgList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="swiper-item" catchtap="viewNotice" data-title="{{item.title}}" data-content="{{item.content}}" data-time="{{item.create_time}}">公告：{{item.des}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- banner轮播 -->
+  <swiper autoplay="true" indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#3482FD" class="banner-swiper">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.pic_url}}" class="slide-image" data-id="{{item.id}}" catchtap="banner"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 平台介绍 -->
+  <view class="descript">
+    <view class="title-img"><image src="../../images/p1.png"></image></view>
+    <view class="video">
+      <video src="{{platformSrc}}"show-center-play-btn="{{false}}" controls="{{false}}" id="video" bindtap='bindplay' bindended="bindend">
+        <view class="play-btn" style="display:{{playShow}}">
+            <image src='../../images/play.png'></image>
+        </view>
+      </video>
+    </view>
+  </view>
+  <!-- 金牌律师 -->
+  <view class="justice">
+    <view class="title-img"><image src="../../images/p2.png"></image></view>
+    <scroll-view class="scroll-view" scroll-x scroll-with-animation="true">
+    <block  wx:for="{{justiceList}}" wx:key="{{index}}">
+      <view class="justice-item">
+        <image src="{{item.gold_medal_url}}"></image>
+        <view class="cover-justice" catchtap="lawyerDetails" data-type="2" data-id="{{item.id}}" data-flow="{{item.is_follow}}">
+          <view class="justice-price">
+            <view class="justice-name">
+              <image src="../../images/medal.png"></image>
+              <view>{{item.true_name}}</view>
+            </view>
+            <view>{{item.minimum_price}}元起/案件</view>
+          </view>
+          <view class="focus-num">
+            <view>关注人数：{{item.follow}}</view>
+            <view class="focus-btn0" hidden="{{item.is_follow==true?true:false}}" data-id="{{item.id}}" catchtap="focus"><image src="../../images/add0.png"></image></view>
+            <view class="sub-btn0"  hidden="{{item.is_follow==true?false:true}}" data-id="{{item.id}}" catchtap="focus"><image src="../../images/sub0.png"></image></view>
+          </view>
+        </view>
+      </view>
+    </block>
+    </scroll-view>
+  </view>
+  <!-- 精英律师 -->
+  <view class="elite-lawyers">
+    <view class="title-img"><image src="../../images/p3.png"></image></view>
+    <view class="elite-list">
+    <block wx:for="{{eliteList}}" wx:key="{{index}}">
+      <view class="elite-item"  catchtap="lawyerDetails" data-type="4" data-id="{{item.id}}" data-flow="{{item.is_follow}}">
+        <view class="elite-descript">
+          <view class="elite-head"><image src="{{item.thumb_url}}"></image></view>
+          <view class="elite-message">
+            <view class="name">{{item.true_name}}</view>
+            <view>{{item.minimum_price}}元起/案件</view>
+            <view>好评度：{{item.praise}}%</view>
+            <view>关注人数：{{item.follow}}</view>
+          </view>
+        </view>
+        <view class="focus-btn1">
+          <image src="../../images/add1.png" hidden="{{item.is_follow==true?true:false}}" data-id="{{item.id}}" catchtap="focus"></image>
+          <image src="../../images/sub1.png" hidden="{{item.is_follow==true?false:true}}" data-id="{{item.id}}" catchtap="focus"></image>
+        </view>
+      </view>
+    </block>
+    </view>
+  </view>
+  <button class="service-btn" open-type="contact">
+    <image src="../../images/service_fill.png"></image>
+  </button>
+</view>

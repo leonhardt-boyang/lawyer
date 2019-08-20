@@ -1,0 +1,55 @@
+<!--pages/my/consult/consult.wxml-->
+<view class="myConsult container">
+  <block wx:for="{{dataList}}" wx:key="{{index}}">
+  <view class="order-item" catchtap="orderDetails" data-order="{{item.order_no}}">
+    <view class="order-status">
+      <view>下单时间：{{item.create_time}}</view>
+      <view>订单状态：<text class="blue">{{item.status}}</text></view>
+    </view>
+    <view class="elite-item">
+      <view class="elite-descript">
+        <view class="elite-head">
+          <image src="{{item.lawyer_thumb_url}}"></image>
+        </view>
+        <view class="elite-message">
+          <view class="name">{{item.lawyer_name}}{{item.lawyer_type_id=="2"?"(金牌律师)":"(精英律师)"}}</view>
+          <view>{{item.lawyer_minimum_price}}元起/案件</view>
+          <view>咨询类型：{{item.case_name}}</view>
+          <view wx:if="{{item.status=='待处理'}}">前面排队人数：<text class="blue">{{item.line_up_num}}</text></view>
+          <view wx:if="{{item.status=='已完成'}}" class="evaluate" catchtap="evaluate"  data-order="{{item.order_no}}">评价</view>
+          <view wx:if="{{item.is_comment=='1'}}" class="evaluate-status">
+            <view>
+              <text>回复效率：</text>
+              <view class="icon">
+                <image wx:if="{{item.reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+              </view>
+            </view>
+            <view>
+              <text>回复满意度：</text>
+              <view class="icon">
+                <image wx:if="{{item.satisfied=='1'}}" src="../../../images/haoping.png"></image>
+                <image wx:if="{{item.satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+                <image wx:if="{{item.satisfied=='3'}}" src="../../../images/chaping.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="next-icon">
+        <image src="../../../images/next.png"></image>
+      </view>
+    </view>
+    <view class="pay-status">
+      <view>{{item.is_pay=='0'?'待支付':'已支付'}}：
+        <text>￥{{item.cost}}</text>
+      </view>
+      <view wx:if="{{item.is_pay=='0'}}" class="payfor">去支付</view>
+      <view wx:if="{{item.status!=='处理中'}}" class="payfor"  catchtap="refund" data-order="{{item.order_no}}" data-money="{{item.cost}}">申请退款</view>
+    </view>
+  </view>
+  </block>
+  <view wx:if="{{dataList.length==0}}" class="no-data">暂无数据...</view>
+</view>
+
