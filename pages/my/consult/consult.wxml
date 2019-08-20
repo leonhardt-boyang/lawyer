@@ -46,7 +46,7 @@
         <text>￥{{item.cost}}</text>
       </view>
       <view wx:if="{{item.is_pay=='0'}}" class="payfor">去支付</view>
-      <view wx:if="{{item.is_pay=='1'&&item.is_apply=='0'}}" class="payfor"  catchtap="refund" data-order="{{item.order_no}}" data-money="{{item.cost}}">申请退款</view>
+      <view wx:if="{{item.status!=='处理中'&&item.status!=='已退款'}}" class="payfor"  catchtap="refund" data-order="{{item.order_no}}" data-money="{{item.cost}}">申请退款</view>
     </view>
   </view>
   </block>
