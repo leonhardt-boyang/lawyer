@@ -122,8 +122,3 @@
   background-color: #3482FD;
   border-radius: 40rpx;
 }
-
-.pj-box{
-  width: 60%;
-  padding: 0 30rpx;
-}

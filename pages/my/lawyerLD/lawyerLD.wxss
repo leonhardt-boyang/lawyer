@@ -143,7 +143,3 @@
   width: 48%;
   margin: 1%;
 }
-.pj-box{
-  width: 60%;
-  padding: 0 30rpx;
-}

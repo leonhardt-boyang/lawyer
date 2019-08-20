@@ -59,8 +59,8 @@
       </view>
     </view>
     <view class="payfor" wx:if="{{dataList.is_pay=='0'}}" data-order="{{dataList.order_no}}" data-money="{{dataList.cost}}">去支付</view>
-    <view class="payfor" wx:if="{{item.status!=='处理中'&&item.is_pay=='1'&&item.is_refund==0}}" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}" catchtap="refund">申请退款</view>
-    <view class="box-btn" wx:if="{{dataList.status=='已完成'&&dataList.is_comment==0}}">
+    <view class="payfor" wx:if="{{dataList.is_pay=='1'&&dataList.is_apply=='0'}}" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}" catchtap="refund">申请退款</view>
+    <view class="box-btn" wx:if="{{dataList.status=='已完成'}}">
       <view catchtap="evaluate" data-order="{{dataList.order_no}}">评价</view>
       <view catchtap="refund" data-order="{{dataList.order_no}}" data-money="{{dataList.money}}">申请退款</view>
     </view>

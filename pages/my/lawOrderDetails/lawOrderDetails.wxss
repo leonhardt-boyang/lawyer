@@ -82,7 +82,6 @@
 }
 .box-btn view{
   flex: 1;
-  font-size: 36rpx;
   margin: 0 30rpx;
   color: #ffffff;
   background-color: #3482FD;

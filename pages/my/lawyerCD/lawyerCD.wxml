@@ -25,23 +25,23 @@
     <view class="content">
       <view class="text" style="height:{{dataList.is_comment=='1'?'250rpx':'420rpx'}}">咨询内容：{{dataList.content}}</view>
     </view>
-    <view  wx:if="{{dataList.is_comment=='1'}}" class="pj-box">
+    <view  wx:if="{{dataList.is_comment=='1'}}" >
       <view>您的评价：</view>
       <view class="evaluate-status">
         <view>
           <text>回复效率：</text>
           <view class="icon">
-            <image wx:if="{{dataList.reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
-            <image wx:if="{{dataList.reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
-            <image wx:if="{{dataList.reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
+            <image wx:if="{{reply_efficiency=='1'}}" src="../../../images/haoping.png"></image>
+            <image wx:if="{{reply_efficiency=='2'}}" src="../../../images/zhongping.png"></image>
+            <image wx:if="{{reply_efficiency=='3'}}" src="../../../images/chaping.png"></image>
           </view>
         </view>
         <view>
           <text>回复满意度：</text>
           <view class="icon">
-            <image wx:if="{{dataList.satisfied=='1'}}" src="../../../images/haoping.png"></image>
-            <image wx:if="{{dataList.satisfied=='2'}}" src="../../../images/zhongping.png"></image>
-            <image wx:if="{{dataList.satisfied=='3'}}" src="../../../images/chaping.png"></image>
+            <image wx:if="{{satisfied=='1'}}" src="../../../images/haoping.png"></image>
+            <image wx:if="{{satisfied=='2'}}" src="../../../images/zhongping.png"></image>
+            <image wx:if="{{satisfied=='3'}}" src="../../../images/chaping.png"></image>
           </view>
         </view>
       </view>

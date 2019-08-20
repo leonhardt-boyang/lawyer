@@ -40,9 +40,8 @@
       </view>
     </view>
     <view class="pay-status">
-      <view>
-      <view wx:if="{{item.money==0}}">未设定金额</view>
-      <view wx:else>{{item.is_pay==0?'待支付':'已支付'}}：<text>￥{{item.money}}</text></view>
+      <view>{{item.is_pay==0?'待支付':'已支付'}}：
+        <text>￥{{item.money}}</text>
       </view>
       <view class="call" catchtap="telphone" data-phone="{{item.mobile}}">
         <view class="sm-icon">
